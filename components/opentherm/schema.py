@@ -462,7 +462,7 @@ SENSORS: Schema[SensorSchema] = Schema({
         "message_data": "u8_lb",
     }),
     "tei": SensorSchema({
-        "description": "Exhaust inlet temperature (°C)", 
+        "description": "Exhaust inlet temperature", 
         "unit_of_measurement": UNIT_EMPTY, 
         "state_class": STATE_CLASS_NONE,
         "disabled_by_default": True,
@@ -471,7 +471,7 @@ SENSORS: Schema[SensorSchema] = Schema({
         "message_data": "f88",
     }),
     "teo": SensorSchema({
-        "description": "Exhaust outlet temperature (°C)", 
+        "description": "Exhaust outlet temperature", 
         "unit_of_measurement": UNIT_EMPTY, 
         "state_class": STATE_CLASS_NONE,
         "disabled_by_default": True,
