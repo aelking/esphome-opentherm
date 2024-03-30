@@ -189,7 +189,7 @@ SENSORS: Schema[SensorSchema] = Schema({
         "accuracy_decimals": 0,
         "icon": "mdi:gas-burner",
         "state_class": STATE_CLASS_TOTAL_INCREASING,
-        "message": "BurnerStarts",
+        "message": "CHBurnerStarts",
         "keep_updated": True,
         "message_data": "u16",
     }),
