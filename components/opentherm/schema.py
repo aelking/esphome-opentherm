@@ -184,13 +184,22 @@ SENSORS: Schema[SensorSchema] = Schema({
         "keep_updated": True,
         "message_data": "s16",
     }),
-    "burner_starts": SensorSchema({
-        "description": "Number of starts burner",
-        "accuracy_decimals": 0,
-        "icon": "mdi:gas-burner",
-        "state_class": STATE_CLASS_TOTAL_INCREASING,
-        "message": "BurnerStarts",
-        "keep_updated": True,
+    "unsuccessful_burner_starts": SensorSchema({
+        "description": "Number of unsuccessful burner starts", 
+        "unit_of_measurement": UNIT_EMPTY,
+        "accuracy_decimals": 0, 
+        "state_class": STATE_CLASS_NONE,
+        "message": "UnsuccessfulBurnerStarts", 
+        "keep_updated": True, 
+        "message_data": "u16",
+     }),
+    "successful_burner_starts": SensorSchema({
+        "description": "Number of successful starts burner", 
+        "unit_of_measurement": UNIT_EMPTY,
+        "accuracy_decimals": 0, 
+        "state_class": STATE_CLASS_NONE,
+        "message": "SuccessfulBurnerStarts", 
+        "keep_updated": True, 
         "message_data": "u16",
     }),
     "ch_pump_starts": SensorSchema({
@@ -442,7 +451,6 @@ SENSORS: Schema[SensorSchema] = Schema({
         "keep_updated": False,
         "message_data": "u8_lb",
     }),
-
     "slave_id": SensorSchema({
         "description": "Slave ID code",
         "unit_of_measurement": UNIT_EMPTY,
