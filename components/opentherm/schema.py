@@ -461,8 +461,24 @@ SENSORS: Schema[SensorSchema] = Schema({
         "keep_updated": False,
         "message_data": "u8_lb",
     }),
-    "tei": SensorSchema({"description": "Exhaust inlet temperature (°C)", "unit_of_measurement": UNIT_EMPTY, "state_class": STATE_CLASS_NONE,"message": "Tei", "keep_updated": True, "message_data": "f88",}),
-    "teo": SensorSchema({"description": "Exhaust outlet temperature (°C)", "unit_of_measurement": UNIT_EMPTY, "state_class": STATE_CLASS_NONE,"message": "Teo", "keep_updated": True, "message_data": "f88",}),
+    "tei": SensorSchema({
+        "description": "Exhaust inlet temperature (°C)", 
+        "unit_of_measurement": UNIT_EMPTY, 
+        "state_class": STATE_CLASS_NONE,
+        "disabled_by_default": True,
+        "message": "Tei", 
+        "keep_updated": True, 
+        "message_data": "f88",
+    }),
+    "teo": SensorSchema({
+        "description": "Exhaust outlet temperature (°C)", 
+        "unit_of_measurement": UNIT_EMPTY, 
+        "state_class": STATE_CLASS_NONE,
+        "disabled_by_default": True,
+        "message": "Teo", 
+        "keep_updated": True, 
+        "message_data": "f88",
+    }),
 })
 
 class BinarySensorSchema(EntitySchema):
